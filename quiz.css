@@ -1,0 +1,47 @@
+#container{
+  width: 99%;
+  height: 680px;
+  border: 3px solid;
+}
+
+#holder{
+  width: 80%;
+  height: 450px;
+  border: 3px solid red;
+  margin: 7em 7em 5em 4em;
+}
+
+#questionLabel{
+  width: 40%;
+  height: 40px;
+  border: 3px solid blue;
+  margin: 15px 15px;
+}
+
+#questionnaire{
+  width: 80%;
+  height: 65px;
+  border: 3px solid blue;
+  margin: 15px 15px;
+}
+
+
+.answer{
+  width: 50%;
+  height: 40px;
+  border: 3px solid green;
+  margin: 25px 15px;
+}
+
+#button{
+  width: 70px;
+  height: 30px;
+  border: 3px solid orange;
+  display: inline-block;
+  float: right;
+  margin: 15px 40px;
+  padding: 5px;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+}
