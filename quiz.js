@@ -13,3 +13,13 @@ var answer1Array = [];
 var answer2Array = [];
 var answer3Array = [];
 var answer4Array = [];
+
+var one = new display("Question 1", "The Question for # One", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
+
+var two = new display("Question 2", "The Question for # Two", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
+
+var three = new display("Question 3", "The Question for # Three", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
+
+var four = new display("Question 4", "The Question for # Four", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
+
+var five = new display("Question 5", "The Question for # Five", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
