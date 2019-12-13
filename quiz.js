@@ -1,3 +1,9 @@
+var buttonB = document.getElementById("button");
+var questionL = document.getElementById("questionLabel");
+var questionS = document.getElementById("quetionnaire");
+var questionS = document.getElementsByClassName("answer");
+
+
 function display(qlabel, questions, answer1, answer2, answer3, answer4){
   var qLabel = qlabelArray.push(qlabel);
   var questionS = questionsArray.push(questions);
@@ -13,6 +19,8 @@ var answer1Array = [];
 var answer2Array = [];
 var answer3Array = [];
 var answer4Array = [];
+
+var randomizer = 0;
 
 var one = new display("Question 1", "The Question for # One", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
 
