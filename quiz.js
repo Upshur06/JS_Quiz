@@ -1,7 +1,7 @@
 var buttonB = document.getElementById("button");
 var questionL = document.getElementById("questionLabel");
-var questionS = document.getElementById("quetionnaire");
-var questionS = document.getElementsByClassName("answer");
+var questionS = document.getElementById("questionnaire");
+var answerS = document.getElementsByClassName("answer");
 
 
 function display(qlabel, questions, answer1, answer2, answer3, answer4){
@@ -36,10 +36,25 @@ var five = new display("Question 5", "The Question for # Five", "Answer #1", "An
 
 function flow(){
     buttonB.addEventListener("click", function(){
-      var one = qlabelArray.shift();
-      questionL.innerHTML = one;
+      var qLabelArr = qlabelArray.shift();
+      var questionsArr = questionsArray.shift();
+      var answer1Arr = answer1Array.shift();
+      var answer2Arr = answer2Array.shift();
+      var answer3Arr = answer3Array.shift();
+      var answer4Arr = answer4Array.shift();
+      questionL.innerHTML = qLabelArr;
+      questionS.innerHTML = questionsArr;
+      answerS[0].innerHTML = answer1Arr;
+      answerS[1].innerHTML = answer2Arr;
+      answerS[2].innerHTML = answer3Arr;
+      answerS[3].innerHTML = answer4Arr;
     });
   }
+
+  // answer1Arr[0].innerHTML = answer1Arr;
+  // answer2Arr[1].innerHTML = answer2Arr;
+  // answer3Arr[2].innerHTML = answer3Arr;
+  // answer4Arr[3].innerHTML = answer4Arr;
 
 // display();
 flow();
