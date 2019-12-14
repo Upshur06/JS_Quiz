@@ -1,8 +1,10 @@
 var buttonB = document.getElementById("button");
 var questionL = document.getElementById("questionLabel");
 var questionS = document.getElementById("questionnaire");
+var resultN = document.getElementById("result");
 var answerS = document.getElementsByClassName("answer");
-
+var tally = 0
+var points = 0
 
 function display(qlabel, questions, answer1, answer2, answer3, answer4){
   var qLabel = qlabelArray.push(qlabel);
@@ -32,29 +34,52 @@ var four = new display("Question 4", "The Question for # Four", "Answer #1", "An
 
 var five = new display("Question 5", "The Question for # Five", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
 
+function point(){
+  points += 1;
+  console.log("points " + (points-1));
+  resultN.innerHTML = "Points: " + (points-1) + " out of 5";
+}
+
+function counter(){
+  tally += 1;
+  console.log(tally);
+  if(tally > 1 && tally < 5){
+    buttonB.innerHTML = "Next";
+  }
+  if(tally === 5) {
+    buttonB.disabled = true;
+    buttonB.innerHTML = "Finish";
+    resultN.style.visibility = "visible";
+    point();
+  }
+}
 
 
-function flow(){
-    buttonB.addEventListener("click", function(){
-      var qLabelArr = qlabelArray.shift();
-      var questionsArr = questionsArray.shift();
-      var answer1Arr = answer1Array.shift();
-      var answer2Arr = answer2Array.shift();
-      var answer3Arr = answer3Array.shift();
-      var answer4Arr = answer4Array.shift();
+
+function visual(){
+  var qLabelArr = qlabelArray.shift();
+  var questionsArr = questionsArray.shift();
+  var answer1Arr = answer1Array.shift();
+  var answer2Arr = answer2Array.shift();
+  var answer3Arr = answer3Array.shift();
+  var answer4Arr = answer4Array.shift();
       questionL.innerHTML = qLabelArr;
       questionS.innerHTML = questionsArr;
       answerS[0].innerHTML = answer1Arr;
       answerS[1].innerHTML = answer2Arr;
       answerS[2].innerHTML = answer3Arr;
       answerS[3].innerHTML = answer4Arr;
+}
+
+function flow(){
+    buttonB.addEventListener("click", function(){
+      counter();
+      visual();
+      point();
     });
   }
 
-  // answer1Arr[0].innerHTML = answer1Arr;
-  // answer2Arr[1].innerHTML = answer2Arr;
-  // answer3Arr[2].innerHTML = answer3Arr;
-  // answer4Arr[3].innerHTML = answer4Arr;
 
-// display();
+
+display();
 flow();
