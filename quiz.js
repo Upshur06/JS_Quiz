@@ -31,3 +31,10 @@ var three = new display("Question 3", "The Question for # Three", "Answer #1", "
 var four = new display("Question 4", "The Question for # Four", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
 
 var five = new display("Question 5", "The Question for # Five", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
+
+
+
+
+
+// display();
+flow();
