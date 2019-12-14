@@ -34,7 +34,12 @@ var five = new display("Question 5", "The Question for # Five", "Answer #1", "An
 
 
 
-
+function flow(){
+    buttonB.addEventListener("click", function(){
+      var one = qlabelArray.shift();
+      questionL.innerHTML = one;
+    });
+  }
 
 // display();
 flow();
