@@ -1,4 +1,5 @@
 var buttonB = document.getElementById("button");
+var buttonBTwo = document.getElementById("buttonTwo");
 var questionL = document.getElementById("questionLabel");
 var questionS = document.getElementById("questionnaire");
 var resultN = document.getElementById("result");
@@ -21,7 +22,6 @@ var answer1Array = [];
 var answer2Array = [];
 var answer3Array = [];
 var answer4Array = [];
-
 var randomizer = 0;
 
 var one = new display("Question 1", "The Question for # One", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
@@ -34,6 +34,7 @@ var four = new display("Question 4", "The Question for # Four", "Answer #1", "An
 
 var five = new display("Question 5", "The Question for # Five", "Answer #1", "Answer #2", "Answer #3", "Answer #4");
 
+
 function point(){
   points += 1;
   console.log("points " + (points-1));
@@ -42,19 +43,18 @@ function point(){
 
 function counter(){
   tally += 1;
-  console.log(tally);
-  if(tally > 1 && tally < 5){
+  console.log("tally " + tally);
+  if(tally >= 1 && tally < 5){
     buttonB.innerHTML = "Next";
   }
-  if(tally === 5) {
+  if(tally >= 5) {
     buttonB.disabled = true;
-    buttonB.innerHTML = "Finish";
+    buttonB.style.visibility = "hidden";
+    buttonBTwo.style.visibility = "visible";
     resultN.style.visibility = "visible";
     point();
   }
 }
-
-
 
 function visual(){
   var qLabelArr = qlabelArray.shift();
@@ -78,7 +78,6 @@ function flow(){
       point();
     });
   }
-
 
 
 display();
